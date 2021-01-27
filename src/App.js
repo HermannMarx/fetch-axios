@@ -9,7 +9,7 @@ function App() {
     loading: false,
     repos: null,
   });
-
+  //Request with axios
   useEffect(() => {
     setAppState({ loading: true });
     const apiUrl = `https://api.github.com/users/hacktivist123/repos`;
@@ -19,6 +19,7 @@ function App() {
     });
   }, [setAppState]);
 
+  //Request with fetch
   /* useEffect(() => {
     setAppState({ loading: true });
     const apiUrl = `https://api.github.com/users/hacktivist123/repos`;
@@ -28,6 +29,7 @@ function App() {
         setAppState({ loading: false, repos: repos });
       });
   }, [setAppState]); */
+
   return (
     <div className="App">
       <div className="container">
